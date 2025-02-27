@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "05c1",
+      "surname": "Alex",
+      "lastname": "Adam",
+      "email": "alexadams@google.com",
+      "password": "12345678",
+      "token": "TpzF7DYKOFFLC9yr"
+    },
+    {
+      "id": "05c3",
+      "surname": "faws",
+      "lastname": "yjdktykdtugk",
+      "email": "maktab459b42@gmail.com",
+      "password": "therftbszdet",
+      "token": "TpzF7DYKOFFLC9yt"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "hgh5",
+      "name": "visa",
+      "currency": "usd",
+      "balance": "10000",
+      "userId": "05c1"
+    },
+    {
+      "id": "hgh9",
+      "name": "visa",
+      "currency": "usd",
+      "balance": "10000",
+      "userId": "05c1"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "df34",
+      "description": "buy a car",
+      "userId": "05c1",
+      "wallet": {
+        "id": "hgh18",
+        "name": "uzcard"
+      },
+      "createdAt": "2022-04-20"
+    }
+  ]
+}
