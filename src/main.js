@@ -1,9 +1,10 @@
 import { scheckAcces } from "./pages/utils/token"
 import { getData } from "./pages/utils/api"
+import { header } from "./Components/heder"
 
+header()
 scheckAcces()
 let userId = localStorage.getItem('userId')
-
 
 function showUser(user) {
     let email = document.querySelector('#email')
@@ -13,22 +14,23 @@ function showUser(user) {
     emailTwo.textContent = user.email
     span.textContent = user.surname + ' ' + user.lastname
 }
-// axios.get(`${url}/${userId}`)
+console.log(userId);
+
+
 getData(`users/${userId}`)
     .then(res => showUser(res.data))
     .catch(error => console.error(error))
 
 
 getData(`wallets?userId=${userId}`)
-    .then(res => createWalletElement(res.data))
+    .then(res => createWalletElement(res.data[4]))
     .catch(error => console.log(error))
 
 export function createWalletElement(wallet) {
     const div = document.createElement("div");
-    div.id = "one";
 
     const p1 = document.createElement("p");
-    p1.textContent = wallet.name;
+    p1.textContent = wallet.type;
 
     const p2 = document.createElement("p");
     p2.textContent = wallet.currency;
@@ -36,36 +38,30 @@ export function createWalletElement(wallet) {
     div.append(p1, p2);
     return div
 }
+
 getData(`transactions?userId=${userId}`)
     .then(res => createTransactionElement(res.data))
     .catch(error => console.log(error))
 
 export function createTransactionElement(transaction) {
-    const table = document.createElement('table');
-    const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
+    const tr = document.createElement("tr"); // Создаём строку
 
-    const headers = ['ID', 'Отправлено с кошелька', 'Категория', 'Сумма транзации', 'Когда'];
-    const headerRow = document.createElement('tr');
+    // Создаём ячейки вручную, чтобы правильно обработать walletType
+    const tdId = document.createElement("td");
+    tdId.textContent = transaction.id;
 
-    headers.forEach(text => {
-        const th = document.createElement('th');
-        th.textContent = text;
-        headerRow.append(th);
-    });
+    const tdCategory = document.createElement("td");
+    tdCategory.textContent = transaction.category;
 
-    transaction.forEach(rowData => {
-        const row = document.createElement('tr');
-        ['id', 'wallet', 'category', 'amount', 'date'].forEach(key => {
-            const td = document.createElement('td');
-            td.textContent = rowData[key];
-            row.append(td);
-        });
-    });    
-    
-    tbody.append(row);
-    thead.append(headerRow);
-    table.append(thead);
-    table.append(tbody);
-    return table
+    const tdAmount = document.createElement("td");
+    tdAmount.textContent = transaction.amount.toLocaleString(); // Красивый формат суммы
+
+    const tdWallet = document.createElement("td");
+    tdWallet.textContent = transaction.walletType.name; // Доступ к "VISA"
+
+    const tdDate = document.createElement("td");
+    tdDate.textContent = transaction.createdAt;
+    tr.append(tdId, tdWallet, tdCategory, tdAmount, tdDate);
+
+    return tr
 }

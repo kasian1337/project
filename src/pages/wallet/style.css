@@ -15,10 +15,12 @@ header {
         gap: 21px;
     }
 
-    p {
+    a {
         font-weight: 500;
         font-size: 16px;
         cursor: pointer;
+        text-decoration: none;
+        color: black;
     }
 
     .data-exit {
@@ -27,6 +29,13 @@ header {
 
         img {
             cursor: pointer;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            text-align: right;
+            color: black;
         }
     }
 }
@@ -51,8 +60,7 @@ header {
 
     .wallet {
         display: grid;
-        grid-template-columns: repeat(4, 282px);
-        grid-template-rows: repeat(2, 160px);
+        grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 24px;
         grid-row-gap: 19px;
 
@@ -71,14 +79,29 @@ header {
             p {
                 font-weight: 500;
                 font-size: 24px;
+                color: white;
             }
         }
+        div:nth-child(4n + 1) {
+            background: linear-gradient(84.37deg, #D7816A 2.27%, #BD4F6C 92.26%);
+        }
+        div:nth-child(4n + 2) {
+            background: linear-gradient(84.37deg, #5F0A87 2.27%, #A4508B 92.26%);
+        }
+        div:nth-child(4n + 3) {
+            background: linear-gradient(84.37deg, #20BF55 2.27%, #01BAEF 92.26%);
+        }
+        div:nth-child(4n + 4) {
+            background: linear-gradient(84.37deg, #380036 2.27%, #0CBABA 92.26%);
+        }
     }
+
     button {
         padding: 18px 179px;
         background: rgba(0, 71, 255, 1);
         color: white;
         border: none;
         border-radius: 10px;
+        cursor: pointer;
     }
 }

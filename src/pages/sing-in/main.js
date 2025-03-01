@@ -13,7 +13,6 @@ form.onsubmit = (e) => {
 
     getData(`users?email=${email}`)
         .then(res => {
-
             let user = res.data[0]
             if (email == user.email) {
                 if (password == user.password) {

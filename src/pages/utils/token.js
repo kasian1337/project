@@ -14,6 +14,6 @@ export function scheckAcces() {
     let token = localStorage.getItem('token')
 
     if (!token) {
-        window.location.href = './src/pages/sing-up/index.html'
+        window.location.replace('/src/pages/sing-up/')
     }
 }

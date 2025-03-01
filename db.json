@@ -1,48 +1,127 @@
 {
   "users": [
     {
-      "id": "05c1",
-      "surname": "Alex",
-      "lastname": "Adam",
-      "email": "alexadams@google.com",
-      "password": "12345678",
-      "token": "TpzF7DYKOFFLC9yr"
+      "id": "2385",
+      "email": "sevariik@gmail.com",
+      "lastname": "Seva",
+      "surname": "Me",
+      "password": "55555",
+      "token": "9DelDw9vMHmn3hkK"
     },
     {
-      "id": "05c3",
-      "surname": "faws",
-      "lastname": "yjdktykdtugk",
-      "email": "maktab459b42@gmail.com",
-      "password": "therftbszdet",
-      "token": "TpzF7DYKOFFLC9yt"
+      "id": "eee3",
+      "email": "alex@gmail.com",
+      "lastname": "Alex",
+      "surname": "John",
+      "password": "121212",
+      "token": "MGXVO0MqyaVrKkl6"
     }
   ],
   "wallets": [
     {
-      "id": "hgh5",
-      "name": "visa",
-      "currency": "usd",
+      "id": "aaa",
+      "type": "Visa",
+      "currency": "RUB",
       "balance": "10000",
-      "userId": "05c1"
+      "userId": "eee3"
     },
     {
-      "id": "hgh9",
-      "name": "visa",
-      "currency": "usd",
+      "id": "abb",
+      "type": "Visa",
+      "currency": "RUB",
       "balance": "10000",
-      "userId": "05c1"
+      "userId": "2385"
+    },
+    {
+      "id": "bbb",
+      "type": "Visa",
+      "currency": "RUB",
+      "userId": "2385"
+    },
+    {
+      "id": "ccc",
+      "type": "Visa",
+      "currency": "RUB",
+      "userId": "2385"
+    },
+    {
+      "id": "170f",
+      "type": "visa",
+      "currency": "RUB",
+      "balance": "10000",
+      "userId": "2385"
     }
   ],
   "transactions": [
     {
-      "id": "df34",
-      "description": "buy a car",
-      "userId": "05c1",
-      "wallet": {
-        "id": "hgh18",
+      "id": "123123",
+      "category": "Автомобиль",
+      "amount": 414000000,
+      "walletType": {
+        "userId": "eee3",
         "name": "uzcard"
       },
-      "createdAt": "2022-04-20"
+      "createdAt": "1 день назад"
+    },
+    {
+      "id": "123321",
+      "category": "Автомобиль",
+      "amount": 222000000,
+      "walletType": {
+        "userId": "eee3",
+        "name": "VISA"
+      },
+      "createdAt": "3 дня назад"
+    },
+    {
+      "id": "321123",
+      "category": "Автомобиль",
+      "amount": 414000000,
+      "walletType": {
+        "userId": "eee3",
+        "name": "VISA"
+      },
+      "createdAt": "5 дней назад"
+    },
+    {
+      "id": "321321",
+      "category": "Автомобиль",
+      "amount": 400000000,
+      "walletType": {
+        "userId": "eee3",
+        "name": "VISA"
+      },
+      "createdAt": "2 дня назад"
+    },
+    {
+      "id": "321321",
+      "category": "Автомобиль",
+      "amount": 400000000,
+      "walletType": {
+        "userId": "eee3",
+        "name": "VISA"
+      },
+      "createdAt": "8 дней назад"
+    },
+    {
+      "id": "213213",
+      "category": "Автомобиль",
+      "amount": 313000000,
+      "walletType": {
+        "userId": "eee3",
+        "name": "VISA"
+      },
+      "createdAt": "5 дней назад"
+    },
+    {
+      "id": "231231",
+      "category": "Автомобиль",
+      "amount": 514000000,
+      "walletType": {
+        "userId": "eee3",
+        "name": "VISA"
+      },
+      "createdAt": "3 дня назад"
     }
   ]
 }

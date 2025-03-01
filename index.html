@@ -10,17 +10,7 @@
 </head>
 
 <body>
-  <header>
-    <div class="navigation">
-      <p>Главная</p>
-      <p>Мои кошельки</p>
-      <p>Мои транзакции</p>
-    </div>
-    <div class="data-exit">
-      <p id="email"></p>
-      <img src="/log-out (1) 1.svg" alt="">
-    </div>
-  </header>
+  <header></header>
   <div class="home">
     <div class="data-user">
       <h1>Добро пожаловать, <span id="name">Alex Adams!</span></h1>
@@ -29,17 +19,28 @@
     <div class="data-wallets">
       <h3>Мои кошельки</h3>
       <div class="wallets"></div>
-      <a href="">Смотреть все кошельки</a>
+      <a href="/src/pages/wallet/index.html">Смотреть все кошельки</a>
     </div>
     <div class="transactions">
       <h3>Последние транзакции</h3>
-      <div class="data-transaction"></div>
-      <a href="">Смотреть все оплаты</a>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Отправлено с кошелька</th>
+            <th>Категория</th>
+            <th>Сумма транзации</th>
+            <th>Когда</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <a href="/src/pages/transaction/">Смотреть все оплаты</a>
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
-  <script type="module" src="./src/pages/utils/utils.js"></script>
-  <script type="module" src="./src/pages/utils/render.js"></script>
+  <script type="module" src="/src/pages/utils/utils.js"></script>
+  <script type="module" src="/src/pages/utils/render.js"></script>
 </body>
 
 </html>

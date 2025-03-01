@@ -11,13 +11,18 @@
 <body>
     <div class="container">
         <h1>Добавить транзакцию</h1>
-        <form name="add-transaction" id="form">
-            <input type="text" name="" placeholder="Из кошелька">
-            <input type="text" name="" placeholder="Сумма">
-            <input type="text" name="" placeholder="Категория">
+        <form name="add_transaction" id="form">
+            <label for="wallet">Из кошелька</label>
+            <select id="wallet" name="wallets" >
+                <option value="type">visa</option>
+                <option value="type">visa</option>
+            </select>
+            <input type="text" name="balance" placeholder="Сумма">
+            <input type="text" name="category" placeholder="Категория">
             <button type="submit">Добавить</button>
         </form>
     </div>
+    <script type="module" src="./../add-transaction/script.js"></script>
 </body>
 
 </html>
