@@ -4,29 +4,31 @@ import { header } from "./Components/heder"
 
 header()
 scheckAcces()
-let userId = localStorage.getItem('userId')
+let userId = localStorage.getItem("userId")
+
+getData(`users/${userId}`)
+    .then(res => showUser(res.data))
+    .catch(error => console.error(error))
 
 function showUser(user) {
     let email = document.querySelector('#email')
     let emailTwo = document.querySelector('#email_two')
     let span = document.querySelector('#name')
+    console.log(email, emailTwo, span);
+    
     email.textContent = user.email
     emailTwo.textContent = user.email
     span.textContent = user.surname + ' ' + user.lastname
 }
 console.log(userId);
 
-
-getData(`users/${userId}`)
-    .then(res => showUser(res.data))
+getData(`wallets?userId=${userId}`)
+    .then(res => createWalletElement(res.data))
     .catch(error => console.error(error))
 
-
-getData(`wallets?userId=${userId}`)
-    .then(res => createWalletElement(res.data[4]))
-    .catch(error => console.log(error))
-
 export function createWalletElement(wallet) {
+    console.log(wallet);
+    
     const div = document.createElement("div");
 
     const p1 = document.createElement("p");
@@ -41,7 +43,7 @@ export function createWalletElement(wallet) {
 
 getData(`transactions?userId=${userId}`)
     .then(res => createTransactionElement(res.data))
-    .catch(error => console.log(error))
+    .catch(error => console.error(error))
 
 export function createTransactionElement(transaction) {
     const tr = document.createElement("tr"); // Создаём строку
@@ -54,7 +56,7 @@ export function createTransactionElement(transaction) {
     tdCategory.textContent = transaction.category;
 
     const tdAmount = document.createElement("td");
-    tdAmount.textContent = transaction.amount.toLocaleString(); // Красивый формат суммы
+    tdAmount.textContent = transaction.amount; // Красивый формат суммы
 
     const tdWallet = document.createElement("td");
     tdWallet.textContent = transaction.walletType.name; // Доступ к "VISA"

@@ -17,7 +17,7 @@ form.onsubmit = (e) => {
             if (email == user.email) {
                 if (password == user.password) {
                     localStorage.setItem("token", res.data.token)
-                    window.location.href = '/'
+                    window.location.replace('/')
                 } else {
                     alert('password is wrong')
                 }

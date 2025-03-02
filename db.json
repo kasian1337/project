@@ -3,7 +3,7 @@
     {
       "id": "2385",
       "email": "sevariik@gmail.com",
-      "lastname": "Seva",
+      "leftname": "Seva",
       "surname": "Me",
       "password": "55555",
       "token": "9DelDw9vMHmn3hkK"
@@ -30,26 +30,26 @@
       "type": "Visa",
       "currency": "RUB",
       "balance": "10000",
-      "userId": "2385"
+      "userId": "eee3"
     },
     {
       "id": "bbb",
       "type": "Visa",
       "currency": "RUB",
-      "userId": "2385"
+      "userId": "eee3"
     },
     {
       "id": "ccc",
       "type": "Visa",
       "currency": "RUB",
-      "userId": "2385"
+      "userId": "eee3"
     },
     {
       "id": "170f",
       "type": "visa",
       "currency": "RUB",
       "balance": "10000",
-      "userId": "2385"
+      "userId": "eee3"
     }
   ],
   "transactions": [
